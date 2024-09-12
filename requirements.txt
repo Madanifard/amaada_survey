@@ -1,3 +1,5 @@
 asgiref
 Django
 sqlparse
+python-dotenv
+psycopg
