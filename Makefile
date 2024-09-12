@@ -43,7 +43,7 @@ cli-web:
 	docker compose exec web /bin/bash
 
 cli-db:
-	docker compose exec -it db psql -U ${POSTGRES_USER}
+	docker compose exec -it db psql -U ${POSTGRES_USER} -d ${POSTGRES_DB}
 
 test-cases:
 	docker compose exec web python manage.py test
