@@ -21,19 +21,19 @@ urlpatterns = [
 
     path('user/<int:user_id>',
          SurveysListCreateAPIView.as_view(),
-         name='surveys-list-create'),
+         name='surveys_list_create'),
 
     path('details/<int:pk>/user/<int:user_id>',
          SurveysDetailAPIView.as_view(),
-         name='surveys-detail'),
+         name='surveys_detail'),
 
     path('questions/',
          QuestionListCreateAPIView.as_view(),
-         name='question-list-create'),
+         name='question_list_create'),
 
     path('questions/<int:question_id>/',
          QuestionDetailAPIView.as_view(),
-         name='question-detail'),
+         name='question_detail'),
 
     path('responses/',
          ResponsesAPIView.as_view(),
@@ -45,5 +45,5 @@ urlpatterns = [
 
     path('survey_participants/',
          SurveyParticipantsAPIView.as_view(),
-         name='survey-participants'),
+         name='survey_participants'),
 ]

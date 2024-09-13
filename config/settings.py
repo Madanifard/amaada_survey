@@ -157,7 +157,7 @@ REST_FRAMEWORK = {
 
 SPECTACULAR_SETTINGS = {
     'TITLE': 'Surveys API',
-    'DESCRIPTION': 'Technical interview document - data recorder company',
+    'DESCRIPTION': 'Technical interview document - dadenegarco company',
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
