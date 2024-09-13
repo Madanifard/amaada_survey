@@ -2,6 +2,7 @@ from django.contrib import admin
 from django.urls import path
 from drf_spectacular.views import SpectacularAPIView, SpectacularRedocView, SpectacularSwaggerView
 from survey.apis.survey import SurveysDetailAPIView, SurveysListCreateAPIView
+from survey.apis.question import QuestionDetailAPIView, QuestionListCreateAPIView
 
 urlpatterns = [
     path('api/schema/',
@@ -23,4 +24,12 @@ urlpatterns = [
     path('details/<int:pk>/user/<int:user_id>',
          SurveysDetailAPIView.as_view(),
          name='surveys-detail'),
+
+    path('questions/',
+         QuestionListCreateAPIView.as_view(),
+         name='question-list-create'),
+
+    path('questions/<int:question_id>/',
+         QuestionDetailAPIView.as_view(),
+         name='question-detail'),
 ]
