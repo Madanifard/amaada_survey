@@ -23,7 +23,27 @@ services:
       - ./.env.db
     networks:
       - survey-network
-
+  
+  celery:
+    build: .
+    container_name: celery_worker
+    command: celery -A config worker --loglevel=info
+    volumes:
+      - .:/usr/src/app
+    depends_on:
+      - redis
+    env_file:
+      - ./.env
+    networks:
+      - survey-network
+  
+  redis:
+    image: redis:latest
+    container_name: redis
+    ports:
+      - "6379:6379"
+    networks:
+      - survey-network
 
 volumes:
   postgres_data:

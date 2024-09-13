@@ -161,3 +161,13 @@ SPECTACULAR_SETTINGS = {
     'VERSION': '1.0.0',
     'SERVE_INCLUDE_SCHEMA': False,
 }
+
+
+# CELERY CONFIG
+CELERY_BROKER_URL = os.environ.get('CELERY_BROKER_URL', "")
+CELERY_RESULT_BACKEND = os.environ.get('CELERY_RESULT_BACKEND', "")
+CELERY_TASK_SERIALIZER = os.environ.get('CELERY_TASK_SERIALIZER', "json")
+CELERY_RESULT_SERIALIZER = os.environ.get('CELERY_RESULT_SERIALIZER', "json")
+CELERY_TIMEZONE = os.environ.get('CELERY_TIMEZONE', "UTC")
+CELERY_ACCEPT_CONTENT = os.environ.get('CELERY_ACCEPT_CONTENT',
+                                       "json").split(",")

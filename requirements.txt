@@ -6,3 +6,5 @@ psycopg
 djangorestframework
 markdown
 drf-spectacular
+celery
+redis
