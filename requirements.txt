@@ -3,3 +3,6 @@ Django
 sqlparse
 python-dotenv
 psycopg
+djangorestframework
+markdown
+drf-spectacular
