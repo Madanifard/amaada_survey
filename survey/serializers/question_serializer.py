@@ -6,7 +6,7 @@ from survey.models.options import Options
 class OptionSerializer(serializers.ModelSerializer):
     class Meta:
         model = Options
-        fields = ['key', 'value']
+        fields = ['id', 'key', 'value']
 
 
 class QuestionSerializer(serializers.ModelSerializer):
