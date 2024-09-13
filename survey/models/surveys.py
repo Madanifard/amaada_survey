@@ -8,6 +8,6 @@ class Surveys(models.Model):
     description = models.TextField()
     is_active = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
-    
+
     def __str__(self) -> str:
         return self.title

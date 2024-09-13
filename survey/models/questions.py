@@ -6,6 +6,6 @@ class Questions(models.Model):
     survey = models.ForeignKey(Surveys, on_delete=models.CASCADE)
     text = models.TextField()
     type = models.CharField(max_length=256)
-    
+
     def __str__(self) -> str:
-        return self.title 
+        return self.title
